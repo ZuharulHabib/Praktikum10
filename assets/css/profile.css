@@ -1,0 +1,47 @@
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image img {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+}
+
+.image:hover img {
+    opacity: 1;
+}
+
+.photo,
+.video {
+    position: absolute;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.photo {
+    top: 18rem;
+    right: -2rem;
+}
+
+.video {
+    top: 9rem;
+    left: -1rem;
+}
+
+.video > * {
+    transform: translateX(2rem);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.photo > * {
+    transform: translateX(-2rem);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.image:hover .photo > *,
+.image:hover .video > * {
+    transform: translateX(0);
+    opacity: 0;
+}

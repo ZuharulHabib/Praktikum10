@@ -1,0 +1,467 @@
+.container2 {
+    width: 80%;
+    max-width: 680px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Retro header styles with bold text */
+.header h3 {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+/* Form and label styles with uppercase text for a more structured look */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Adjusting font styles for readability in a retro context */
+p, input[type="radio"], label {
+    font-size: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h4 {
+    margin-top: 0;
+}
+
+#modalText {
+    margin-top: 20px;
+}
+.container3 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container3 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .container3 svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  .container3 svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .container3 input:checked ~ svg {
+    fill: #E3474F;
+  }
+  .heart-container {
+    --heart-color: rgb(91, 173, 255);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+  }
+  
+  .heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .heart-container .svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart-container .svg-outline,
+          .heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+  }
+  
+  .heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+  }
+  
+  .heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+  }
+  
+  @keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+  }
+  
+  @keyframes keyframes-svg-celebrate {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .container4 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .container4 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .container4 svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  .container4 svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .container4 input:checked ~ svg {
+    fill: #ffeb49;
+    animation: sparks 0.5s ease-in-out forwards;
+  }
+  @keyframes sparks {
+    0% {
+      opacity: 1;
+      transform: translateY(0) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) rotate(45deg);
+    }
+  }
+  .ui-bookmark {
+    --icon-size: 24px;
+    --icon-secondary-color: rgb(77, 77, 77);
+    --icon-hover-color: rgb(97, 97, 97);
+    --icon-primary-color: rgb(252, 54, 54);
+    --icon-circle-border: 1px solid var(--icon-primary-color);
+    --icon-circle-size: 35px;
+    --icon-anmt-duration: 0.3s;
+  }
+  
+  .ui-bookmark input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .ui-bookmark .bookmark {
+    width: var(--icon-size);
+    height: auto;
+    fill: var(--icon-secondary-color);
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+  
+  .bookmark::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    padding: 1px;
+  }
+  
+  .bookmark::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: var(--icon-circle-border);
+    opacity: 0;
+  }
+  
+  /* actions */
+  
+  .ui-bookmark:hover .bookmark {
+    fill: var(--icon-hover-color);
+  }
+  
+  .ui-bookmark input:checked + .bookmark::after {
+    -webkit-animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  .ui-bookmark input:checked + .bookmark {
+    fill: var(--icon-primary-color);
+    -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
+    animation: bookmark var(--icon-anmt-duration) forwards;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  
+  .ui-bookmark input:checked + .bookmark::before {
+    -webkit-animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  @-webkit-keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @-webkit-keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  

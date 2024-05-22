@@ -1,0 +1,143 @@
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6rem;
+    overflow: hidden;
+    margin: 1rem; /* Add margin to prevent images from touching each other */
+}
+
+.image {
+    width: 35rem;
+    max-width: 100%;
+    border-radius: 6rem;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+}
+
+.image-container:hover .image img {
+    opacity: 1;
+}
+
+.photo,
+.video {
+    position: absolute;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.video {
+    top: 9rem;
+    left: -1rem;
+}
+
+.photo {
+    top: 18rem;
+    right: -2rem;
+}
+
+.video > * {
+    transform: translateX(2rem);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.photo > * {
+    transform: translateX(-2rem);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.image-container:hover .video > *,
+.image-container:hover .photo > * {
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.title1 {
+    font-family: 'Monument', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+    .title1 {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 100%;
+        border-radius: 3rem;
+    }
+
+    .image-container {
+        margin: 0.5rem;
+    }
+
+    .video {
+        top: 5rem;
+        left: -0.5rem;
+    }
+
+    .photo {
+        top: 10rem;
+        right: -1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title1 {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .image-container {
+        margin: 0.25rem;
+    }
+
+    .image {
+        width: 100%;
+        border-radius: 2rem;
+    }
+
+    .video {
+        top: 4rem;
+        left: 0;
+    }
+
+    .photo {
+        top: 8rem;
+        right: 0;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDW Praktikum8</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/new.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="fish"></ion-icon>
+                        </span>
+                        <span class="title">051 Habib</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pages/profile.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">My profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pages/form.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Form</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pages/hobby.html" class="nav-link" data-page="hobby">
+                        <span class="icon">
+                            <ion-icon name="rocket-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Hobby</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <h2>Dashboard</h2>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/habib1.jpeg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card" onclick="show1()">
+                    <div>
+                        <div class="numbers">3</div>
+                        <div class="cardName">games</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="game-controller"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card" onclick="show2()">
+                    <div>
+                        <div class="numbers">3</div>
+                        <div class="cardName">olahraga</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="basketball-sharp"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card" onclick="show3()">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">music</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="headset-sharp"></ion-icon>
+                    </div>
+                </div>
+
+               
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <h4>Deskripsi</h4>
+                    <div class="description">
+                    <p>TUGAS web ini dibuat dengan HTML, CSS, dan JavaScript </p>
+                    <br>
+                    <p>dengan isi web ada form ada link ada hobby</p>
+            <div class="logos">
+                <img src="./assets/imgs/html.png" alt="HTML Logo" class="tech-logo">
+                <img src="./assets/imgs/css.png" alt="CSS Logo" class="tech-logo">
+                <img src="./assets/imgs/js.png" alt="JavaScript Logo" class="tech-logo">
+            </div>
+        </div>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>pertemanan</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/agung.jpeg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Agung <br> <span>Palembang</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/buyya.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Buyya <br> <span>Kalimantan</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/adit.jpeg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Adit <br> <span>Tangerang</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/ojan.jpeg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Fauzan <br> <span>Papua</span></h4>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <!-- Konten dinamis akan dimuat di sini -->
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
